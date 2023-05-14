@@ -84,12 +84,12 @@ body {
 
 .home {
     background-image: url(/img/kids.jpg);
+    padding: 5rem;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     position: relative;
-
 }
 
 .overlay {
@@ -98,7 +98,6 @@ body {
     width: 100%;
     height: 100%;
     opacity: .5;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -176,6 +175,10 @@ body {
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .about_text {
@@ -191,6 +194,7 @@ body {
     margin-top: 2rem;
     opacity: .8;
     transition: opacity 0.5s ease-in-out;
+    position: relative;
 }
 
 .about_img:hover {
@@ -201,11 +205,16 @@ body {
 
 /* --------------------------------------- SERVICES */
 
+.services {
+    padding-bottom: 3rem; 
+}
+
 .services_list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center
+    align-items: center;
+    position: relative;
 }
 
 .service {
@@ -238,7 +247,20 @@ body {
     padding-top: 2rem;
 }
 
-@media screen and (min-width: 768px) {
+.services_list::after {
+    content: '';
+    position: absolute;
+    bottom: -130px;
+    width: 100vw;
+    height: 90px;
+    background: url(/svg/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
     .services_list {
         display: flex;
         flex-direction: row;
@@ -279,8 +301,19 @@ body {
 
 /* --------------------------------------- DEPOIMENTOS */
 
+.depos {
+    background-image: url(/img/makeup.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
 .depo_title {
-    color: var(--blue-color);
+    color: var(--white-color);
     font-size: 1.5rem;
     font-weight: bold;
     position: relative;
@@ -301,7 +334,7 @@ body {
 
 .depos_content {
     font-family: 'IBM Plex Serif', sans-serif;
-    color: var(--brown-color);
+    color: var(--white-color);
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -321,12 +354,27 @@ body {
     text-align: center;
     line-height: normal;
     letter-spacing: 1px;
+    position: relative;
 }
 
 .depos_title {
     font-weight: bold;
     text-transform: uppercase;
     padding: 2rem;
+}
+
+.depos::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 100vw;
+    height: 90px;
+    background: url(/svg/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scaleY(-1);
+    z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -346,3 +394,34 @@ body {
 }
 
 /* --------------------------------------- FOTOS */
+
+.galery {
+    padding-bottom: 3rem;
+    display: none;
+}
+
+.galery_photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.galery_photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 220px;
+}
+
+@media screen and (min-width: 768px) {
+    .galery {
+        display: inherit;
+    }
+}
