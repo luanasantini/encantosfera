@@ -24,6 +24,11 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
 
     font-family: 'Montserrat', sans-serif;
@@ -85,7 +90,7 @@ body {
 
 /* --------------------------------------- HOME */
 
-.home {
+#home {
     background-image: url(../img/kids.jpg);
     padding: 5rem;
     -webkit-background-size: cover;
@@ -206,7 +211,7 @@ body {
 
 /* --------------------------------------- SERVICES */
 
-.services {
+#services {
     padding-bottom: 3rem;
 }
 
@@ -282,7 +287,7 @@ body {
 
 /* --------------------------------------- DEPOIMENTOS */
 
-.depos {
+#depos {
     background-image: url(../img/makeup.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -342,7 +347,7 @@ body {
     padding: 2rem;
 }
 
-.depos::after {
+#depos::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -374,7 +379,7 @@ body {
 
 /* --------------------------------------- FOTOS */
 
-.galery {
+#galery {
     padding-bottom: 3rem;
     display: none;
 }
@@ -398,15 +403,15 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .galery {
-        display: inherit;
+    #galery {
+        display: block;
     }
 }
 
 
 /* --------------------------------------- CONTATO */
 
-.contact {
+#contact {
     padding: 10% 10%;
     background-image: url(../img/waves.png);
     background-repeat: no-repeat;
